@@ -1,0 +1,42 @@
+As it says it self it's a webserver so we dont have to nmap
+
+Index.html:
+"
+  Check source code
+    Username: R1ckRul3s
+"
+Robots.txt:
+"
+  Always check if there is a robots.txt even if the DirBuster wont detect it or any other program
+  
+    PassWord: Wubbalubbadubdub
+"
+
+After that go to the login page http://<ip>/login.php
+You can now exec commands on the machine
+try ls to see what file exist
+
+First_Ingredient:
+"
+  To see the content of the file type:
+    base64 Sup3rS3cretPickl3Ingred.txt | base64 --decode    
+"
+The second ingridiant is in another directory you can ls ../.. and see what other directories exist
+The one we want is the rick directory in home ../../../home/rick/
+So..
+
+Second_Ingrediant:
+"
+    base64 ../../../home/rick/'second ingredients' | base64 --decode
+"
+Now The third ingr is in the root directory
+But dont worry theres a vuln and we can use sudo without password so we dont even have to connect to 
+the server via a reverse_shell
+
+Third_And_Final_Ingrediant:
+"
+    sudo base64 ../../../root/3rd.txt | base64 --decode
+"
+
+And you are done!
+Follow me -_-
